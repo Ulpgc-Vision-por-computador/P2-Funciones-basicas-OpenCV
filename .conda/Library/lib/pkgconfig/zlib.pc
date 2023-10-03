@@ -1,0 +1,13 @@
+prefix=d:/Users/Eduardo Etopa/Desktop/uni/primer cuatri/VC/p2/P2-Funciones-basicas-OpenCV/.conda/Library
+exec_prefix=d:/Users/Eduardo Etopa/Desktop/uni/primer cuatri/VC/p2/P2-Funciones-basicas-OpenCV/.conda/Library
+libdir=d:/Users/Eduardo Etopa/Desktop/uni/primer cuatri/VC/p2/P2-Funciones-basicas-OpenCV/.conda/Library/lib
+sharedlibdir=d:/Users/Eduardo Etopa/Desktop/uni/primer cuatri/VC/p2/P2-Funciones-basicas-OpenCV/.conda/Library/lib
+includedir=d:/Users/Eduardo Etopa/Desktop/uni/primer cuatri/VC/p2/P2-Funciones-basicas-OpenCV/.conda/Library/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
