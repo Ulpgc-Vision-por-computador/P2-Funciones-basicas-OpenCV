@@ -103,6 +103,7 @@ Imagen 4: Imagen de Sisifo tras el umbralizado
 Como ayudas para la realización de la práctica y la aplicación de un detector de objetos haciendo uso de OpenCV se han visitado estas páginas:
 - [learnopencv](https://learnopencv.com/image-filtering-using-convolution-in-opencv/#gauss-blur-opencv)
 - [Face Detection using Python and OpenCV](https://www.geeksforgeeks.org/face-detection-using-python-and-opencv-with-webcam/?ref=lbp)
+- [Haar Cascade classifier of OpenCV](https://github.com/opencv/opencv/tree/master/data/haarcascades)
 
 Realizado por:
 - Eduardo Etopa Lechuga
