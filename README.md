@@ -15,8 +15,11 @@
   sum_big_vals = np.sum(mask_threshold)
   ```
 - Finalmente el código muestra la imagen de canny y su gráfica
-  
 
+  ![mono](media/mono.png)
+
+Imagen 1: Imagen del mendril después de aplicar el filtro
+  
 ### Operador Sobel
 **El código mumestra el resultado de una imágen a la que se le ha aplicado el operador Sobel.**
 
@@ -29,6 +32,14 @@
   sobely = cv2.Sobel(ggris, cv2.CV_64F, 0, 1)  # y
   ```
 - Se combinan los resultados de ambas utilizando la función `cv2.add` y se muestran los resultados con `plt.imshow(sobel, cmap='gray')` y con `plt.imshow(cv2.convertScaleAbs(sobel), cmap='gray')` ajustando la escala
+
+![sisifo_no_escala](media/sisifonoescal.png)
+
+Imagen 2: Imagen de Sobel sin ajuste de escala
+
+![sisifo_escala](media/sisifoescala.png)
+
+Imagen 3: Imagen con el ajuste
 
 
 ### Umbralizado de imagen
@@ -45,10 +56,29 @@
 
   Calcula las sumas de píxeles a lo largo de las filas y columnas de la imagen umbralizada y luego normaliza estos valores.
 
-- Calcula 
+- Calcula la cantidad de valores que superan 0'95 * máximo
+
+- Luego se muestra la imagen resultante después de aplicar los filtros y se muestran los datos resultantes de cada filtro sobre la imagen
+
+![Sisifo umbralizado](media/sisifo_umbralizado.png)
+
+Imagen 4: Imagen de Sisifo tras el umbralizado
   
 ### Filtro Laplace
 **El código muestra el uso de un filtro Laplace ya mostrado en la anterior práctica.**
+
+- El codigo inicializa un objeto que representa la camara web y entra en un bucle en el que captura continuamente los frames de la camara.
+
+- ```py
+  kernel = np.array([
+                    [0, -1,  0],
+                    [-1,  4, -1],
+                    [0, -1,  0]
+                  ])
+  ```
+  Se defne la matriz de kernel laplaciana
+
+  - `cv2.filter2D(frame, ddepth=-1, kernel=kernel)`: Se aplica el filtro Laplaciano a la imagen y posteriormente se muestra por pantalla
 
 ### Reconocimiento de caras
 **El código muestra el uso de un Haar Cascade classifier para el reconocimiento de caras**
