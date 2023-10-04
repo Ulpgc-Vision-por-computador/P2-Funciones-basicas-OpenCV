@@ -83,8 +83,21 @@ Imagen 4: Imagen de Sisifo tras el umbralizado
 ### Reconocimiento de caras
 **El código muestra el uso de un Haar Cascade classifier para el reconocimiento de caras**
 
+- `face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')`: Carga el clasificador Haar Cascade para la detección de caras.
+- Convierte la imagen de la web cam a escala de griises
+- `faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(30,30))`: Utiliza el clasificador Haar Cascade para detectar caras en la imagen en escala de grises
+- Se itera sobre las coordenadas de las caras encontradas
+-   - ```py
+      mandril = cv2.resize(mandril, (w, h))
+      frame[y:y+h, x:x+w] = mandril
+      ```
+      Redimensiona la imagen del mandril para que coincida con las dimensiones de la cara detectada y la coloca sobre la cara en el fotograma original
 
 
+  ![face detection](media/face.PNG)
+
+  Imagen 5: face detection
+          
 ## Fuentes de información
 
 Como ayudas para la realización de la práctica y la aplicación de un detector de objetos haciendo uso de OpenCV se han visitado estas páginas:
