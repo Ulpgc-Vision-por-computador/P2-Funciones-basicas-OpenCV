@@ -33,7 +33,7 @@ Imagen 1: Imagen del mendril después de aplicar el filtro
   ```
 - Se combinan los resultados de ambas utilizando la función `cv2.add` y se muestran los resultados con `plt.imshow(sobel, cmap='gray')` y con `plt.imshow(cv2.convertScaleAbs(sobel), cmap='gray')` ajustando la escala
 
-![sisifo_no_escala](media/sisifonoescal.PNG)
+![sisifo_no_escala](media/sisifonoescala.PNG)
 
 Imagen 2: Imagen de Sobel sin ajuste de escala
 
