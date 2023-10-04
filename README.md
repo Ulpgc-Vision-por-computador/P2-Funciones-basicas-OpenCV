@@ -16,7 +16,7 @@
   ```
 - Finalmente el código muestra la imagen de canny y su gráfica
 
-  ![mono](media/mono.png)
+  ![mono](media/mono.PNG)
 
 Imagen 1: Imagen del mendril después de aplicar el filtro
   
@@ -33,11 +33,11 @@ Imagen 1: Imagen del mendril después de aplicar el filtro
   ```
 - Se combinan los resultados de ambas utilizando la función `cv2.add` y se muestran los resultados con `plt.imshow(sobel, cmap='gray')` y con `plt.imshow(cv2.convertScaleAbs(sobel), cmap='gray')` ajustando la escala
 
-![sisifo_no_escala](media/sisifonoescal.png)
+![sisifo_no_escala](media/sisifonoescal.PNG)
 
 Imagen 2: Imagen de Sobel sin ajuste de escala
 
-![sisifo_escala](media/sisifoescala.png)
+![sisifo_escala](media/sisifoescala.PNG)
 
 Imagen 3: Imagen con el ajuste
 
@@ -60,7 +60,7 @@ Imagen 3: Imagen con el ajuste
 
 - Luego se muestra la imagen resultante después de aplicar los filtros y se muestran los datos resultantes de cada filtro sobre la imagen
 
-![Sisifo umbralizado](media/sisifo_umbralizado.png)
+![Sisifo umbralizado](media/sisifo_umbralizado.PNG)
 
 Imagen 4: Imagen de Sisifo tras el umbralizado
   
