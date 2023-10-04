@@ -20,12 +20,33 @@
 ### Operador Sobel
 **El código mumestra el resultado de una imágen a la que se le ha aplicado el operador Sobel.**
 
+- Se lee la imagen desde el archivo y la convierte en formato RGB con al función: `cv2.cvtColor(img2, cv2.COLOR_BGR2RGB)`
+- `gris = cv2.cvtColor(img_rgb, cv2.COLOR_BGR2GRAY)`: Convierte laimagen a escala de grises
+- `cv2.GaussianBlur(gris, (3, 3), 0)`: Aplica un filtro de desenfque de Gauss
+- Se usan operdorers de Sobel en las direcciones x e y para la detección de bordes verticales y horizontales:
+  ```py
+  sobelx = cv2.Sobel(ggris, cv2.CV_64F, 1, 0)  # x
+  sobely = cv2.Sobel(ggris, cv2.CV_64F, 0, 1)  # y
+  ```
+- Se combinan los resultados de ambas utilizando la función `cv2.add` y se muestran los resultados con `plt.imshow(sobel, cmap='gray')` y con `plt.imshow(cv2.convertScaleAbs(sobel), cmap='gray')` ajustando la escala
 
 
 ### Umbralizado de imagen
 **El código muestra una imagen resultante de Sobel a la que se le ha aplicado un umbralizado.**
 
+- `res, umbralImg = cv2.threshold(gris, umbral, 255, cv2.THRESH_BINARY)`: Aplica umbralización a la imagen. Los píxeles con intensidades por encima de 100 se establecen en 255 (blanco) y los píxeles por debajo se establecen en 0 (negro)
+- ```py
+  row_counts = cv2.reduce(umbralImg, 1, cv2.REDUCE_SUM, dtype=cv2.CV_32SC1)
+  rows = row_counts[:, 0] / (255 * umbralImg.shape[1])
 
+  col_counts = cv2.reduce(umbralImg, 0, cv2.REDUCE_SUM, dtype=cv2.CV_32SC1)
+  cols = col_counts[0] / (255 * umbralImg.shape[0])
+  ```
+
+  Calcula las sumas de píxeles a lo largo de las filas y columnas de la imagen umbralizada y luego normaliza estos valores.
+
+- Calcula 
+  
 ### Filtro Laplace
 **El código muestra el uso de un filtro Laplace ya mostrado en la anterior práctica.**
 
